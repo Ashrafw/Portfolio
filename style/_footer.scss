@@ -1,0 +1,95 @@
+.footer {
+  //   height: 40vh;
+  background-color: var(--color-bg);
+  width: 100%;
+  padding: 10px 0 40px;
+  .content {
+    @include container;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 110px;
+      margin: 10px 0;
+    }
+
+    h3 {
+      padding: 5px 0;
+      font-family: $font-sec;
+      font-weight: 300;
+      font-size: 1.6rem;
+      width: 50%;
+      text-align: center;
+      color: var(--color-prim1);
+      color: var(--color-sec-p);
+    }
+    h4 {
+      padding: 15px 0;
+      font-size: 1.2rem;
+      font-family: $font-prim1;
+      color: var(--color-sec-p);
+      color: var(--color-prim1);
+    }
+    .links {
+      a {
+        cursor: pointer;
+        i {
+          font-size: 3rem;
+          padding: 10px 40px;
+          color: var(--color-sec-p);
+        }
+        .fa-youtube {
+          color: #ff0000;
+        }
+        .fa-envelope {
+          color: #0058bd;
+        }
+        .fa-github {
+          color: var(--color-sec-p);
+        }
+
+        .fa-youtube:hover {
+          color: #ff0000a2;
+        }
+        .fa-envelope:hover {
+          color: #0058bd73;
+        }
+        .fa-github:hover {
+          color: #3a3a3a70;
+        }
+      }
+      .cv {
+        font-family: 'Russo One', sans-serif;
+        font-size: 3rem;
+        color: #ad0c0c;
+        letter-spacing: 2px;
+      }
+      .cv:hover {
+        color: #e90000;
+      }
+    }
+  }
+}
+
+footer {
+  //   height: 40vh;
+  background-color: var(--color-prim1);
+  width: 100%;
+  text-align: center;
+  padding: 2px 0;
+  .content {
+    @include container;
+
+    h3 {
+      padding: 5px 0;
+      font-family: $font-sec;
+      font-weight: 500;
+      font-size: 1.2rem;
+      text-align: center;
+      color: var(--color-sec-w);
+    }
+  }
+}

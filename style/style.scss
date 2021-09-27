@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+$font-prim1: 'Montserrat', sans-serif;
+$font-prim2: 'Poppins', sans-serif;
+$font-sec: 'Roboto', sans-serif;
+
+$color-bg-L: whitesmoke;
+$color-prim1-L: rgb(11, 58, 94);
+$color-prim1-text-L: rgb(0, 0, 0);
+$color-prim2-L: rgba(11, 58, 94, 0.5);
+$color-sec-title-L: rgb(85, 85, 85);
+$color-sec-p-L: rgb(0, 0, 0);
+
+$color-sec-w-L: rgb(247, 247, 247);
+$color-sec-w-D: rgb(247, 247, 247);
+
+$color-bg-D: rgb(21, 29, 43);
+$color-prim1-D: rgb(108, 94, 207);
+$color-prim1-text-D: rgb(255, 255, 255);
+$color-prim2-D: rgba(108, 94, 207, 0.3);
+$color-sec-title-D: rgb(150, 196, 202);
+$color-sec-p-D: rgb(206, 206, 206);
+
+$color-box-shad-M-L: 0 19px 38px rgba(0, 0, 0, 0.3),
+  0 15px 12px rgba(0, 0, 0, 0.22);
+$color-box-shad-S-L: 0 10px 20px rgba(0, 0, 0, 0.19),
+  0 6px 6px rgba(0, 0, 0, 0.23);
+
+$color-box-shad-M-D: 0 19px 38px rgba(190, 190, 190, 0.3),
+  0 15px 12px rgba(201, 201, 201, 0.22);
+$color-box-shad-S-D: 0 10px 20px rgba(201, 201, 201, 0.19),
+  0 6px 6px rgba(201, 201, 201, 0.23);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  transition: all 0.8s ease;
+  overflow-x: hidden;
+}
+html {
+  --color-bg: #{$color-bg-L};
+  --color-prim1: #{$color-prim1-L};
+  --color-prim1-text: #{$color-prim1-text-L};
+  --color-prim2: #{$color-prim2-L};
+  --color-sec-title: #{$color-sec-title-L};
+  --color-sec-p: #{$color-sec-p-L};
+  --color-sec-w: #{$color-sec-w-L};
+
+  --color-box-prim: #{$color-box-shad-M-L};
+  --color-box-sec: #{$color-box-shad-S-L};
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  --color-bg: #{$color-bg-D};
+  --color-prim1: #{$color-prim1-D};
+  --color-prim1-text: #{$color-prim1-text-D};
+  --color-prim2: #{$color-prim2-D};
+  --color-sec-title: #{$color-sec-title-D};
+  --color-sec-p: #{$color-sec-p-D};
+  --color-sec-w: #{$color-sec-w-D};
+
+  --color-box-prim: #{$color-box-shad-M-D};
+  --color-box-sec: #{$color-box-shad-S-D};
+  scroll-behavior: smooth;
+}
+
+// body.dark {
+//   overflow-x: hidden;
+//   :root {
+//     --color-sec-p: rgb(0, 0, 0);
+//     --color-bg: rgb(255, 255, 255);
+//     --color-prim1: rgb(11, 58, 94);
+//     --color-prim1-text: rgb(255, 255, 255);
+//     --color-prim2: rgba(11, 58, 94, 0.6);
+//     --color-sec-title: rgb(85, 85, 85);
+//     --color-sec-p: rgb(0, 0, 0);
+//   }
+// }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-prim1;
+}
+p {
+  font-family: $font-sec;
+}
+a {
+  color: var(--color-sec-p);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+@mixin container {
+  max-width: 1200px;
+  margin: auto;
+}
+@mixin container90 {
+  width: 90%;
+  margin: auto;
+}
+@media (max-width: 1200px) {
+}
+
+@import 'main';
+@import 'nav';
+@import 'projects';
+@import 'footer';
